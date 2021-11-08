@@ -1,0 +1,15 @@
+while wait(5) do
+	for i,v in pairs(game:GetService("Workspace").AppleBobbing:GetChildren()) do
+		if v.ClassName == "Model"  then
+			wait(1)
+			pcall(function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Seat.CFrame
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+				game.Workspace.Gravity = 1000
+				wait(1)
+				fireproximityprompt(v.Seat.Attachment.ProximityPrompt)
+				wait(5)
+end)
+end
+end
+end
