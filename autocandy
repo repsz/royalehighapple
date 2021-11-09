@@ -27,8 +27,6 @@ while true do
 	wait(1)
 	local VirtualInputManager = game:GetService('VirtualInputManager')
 	VirtualInputManager:SendKeyEvent(true, "E", false, game)
-	wait(120)
-	game:GetService("TeleportService"):Teleport(735030788, game:GetService("Players").LocalPlayer)
 end
 
 
