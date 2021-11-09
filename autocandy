@@ -1,0 +1,35 @@
+while wait(10) do	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-413.8837890625, 124.2384185791, -459.94430541992)
+	game:GetService("RunService").Heartbeat:Connect(function()
+		for i,v in pairs(game:GetService("Workspace").DroppedCandyFolder:GetChildren()) do
+			if v.ClassName == "MeshPart" or v.ClassName == "Part" then
+				v.CanCollide = false
+				v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			end
+		end
+
+	end)
+	for i,v in pairs(game:GetService("Workspace").TrickorTreatDoors:GetChildren()) do
+		if v.ClassName == "Model"  then
+			wait(1)
+			pcall(function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Doorbell.CFrame
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+				game.Workspace.Gravity = 1000
+				wait(1)
+				fireproximityprompt(v.Doorbell.Attachment.ProximityPrompt)
+				wait(2)
+			end)
+		end
+	end
+end
+
+while true do 
+	wait(1)
+	local VirtualInputManager = game:GetService('VirtualInputManager')
+	VirtualInputManager:SendKeyEvent(true, "E", false, game)
+	wait(120)
+	game:GetService("TeleportService"):Teleport(735030788, game:GetService("Players").LocalPlayer)
+end
+
+
+
